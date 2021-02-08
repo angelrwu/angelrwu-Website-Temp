@@ -1,0 +1,366 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    --dark: #313131;
+    --white: #f4f6f6;
+    --accentHighlight:#e3e9e9;
+    --accentMidtone:#cad7dc;
+    --accentLowtone:#175779;
+
+    --fontTitle: 4em;
+    --fontIntro: 2em;
+    --fontParagraph: 1em;
+
+    font-family: roboto, sans-serif;
+    font-kerning: normal;
+}
+
+h1{
+    font-size: var(--fontTitle);
+}
+
+h2{
+    font-size: var(--fontIntro);
+}
+
+p{
+    font-size: var(--fontParagraph);
+}
+
+html{
+    background-color: var(--dark);
+}
+
+body{
+    margin: 0% 12.5%;
+    background-color: var(--accentMidtone);
+    width: min();
+}
+div#logo{
+    margin-left: 12px;
+    align-items: center;
+    height: 3%;
+    text-align: left;
+    display: flex;
+    font-size: var(--fontTitle);
+}
+
+#logo>img{ 
+    height: 2em;
+    width: auto;
+    margin-right: 0.25em;
+}
+
+#introduction{
+    
+  /* width: 66%; */
+  /* height: 54%; */
+  /* height: 300px; */
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(Media/background.png);
+  background-color: var(--accentMidtone);
+  /* padding-bottom: 20px; */
+}
+
+#introText{
+    height: 10em;
+    margin-top: 1em;
+    font-size: var(--fontIntro);
+    position: relative;
+    font-weight: 500;
+}
+
+#introText > *{
+    position: absolute;
+}
+
+.welcome{
+    right: 40%;
+}
+
+.software{
+    top: 2em;
+    right: 30%;
+}
+
+.anpersand{
+    top: 3em;
+    right: 35%;
+}
+
+.designer{
+    top: 4em;
+    right: 28%;
+}
+
+#socialMediaCircles{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: end;
+    margin-right: 8%;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
+}
+
+.dot {
+    border: none;
+    height: clamp(40px,3vw,3vw);
+    width: clamp(40px,3vw,3vw);
+    background-color: var(--accentHighlight);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.dot4{
+    visibility: hidden;
+}
+
+.dot7{
+    visibility: hidden;
+}
+
+.dot8{
+    visibility: hidden;
+}
+
+/* insert svg of the dude */
+#art{
+    position: absolute;
+    margin-top: 6em;
+}
+
+#art img{
+    height: 25em;
+}
+
+
+
+div#cta{
+    margin-left: 3em;
+    
+    position: relative;
+    /* padding-bottom: 1em; */
+}
+/* insert buttons */
+.darkButton{
+    border: none;
+    background-color: var(--accentLowtone);
+    color: var(--accentHighlight);
+    border-radius: 3px;
+    padding: 0.3em 0.8em ;
+    margin-right: 2em;
+    font-weight: 500;
+    font-size: var(--fontParagraph);
+}
+
+.lightButton{
+    border-color: var(--dark);
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: var(--dark);
+    padding: 0.25em 0.8em ;
+    font-weight: 500;
+    font-size: var(--fontParagraph);
+}
+
+#projects{
+    /* padding-right: 30%; */
+    background-color: var(--accentMidtone);
+}
+
+
+#projectDemo:nth-child(2) {
+    background: var(--accentHighlight);
+  }
+
+/* insert template for projects */
+#projectDemo{
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-bottom: 2em;
+    background-color: var(--accentMidtone);
+    
+    display: flex;
+}
+
+#projectDemo > div{
+    width: 66%;
+}
+
+#projectDemo > div > p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    /* padding-right: 2.5em; */
+    margin-right: clamp(2.5em,4em, 8em);
+}
+
+div#demoPhoto{
+    aspect-ratio: 16/9;
+}
+
+@media screen and (min-width: 1920px){
+    *{
+        --fontTitle: 3em;
+        --fontIntro: 2em;
+        --fontParagraph: 2em;   
+    }
+
+    #projects{
+        /* padding-right: 30%; */
+        background-color: var(--accentMidtone);
+    }
+
+    div#demoPhoto > img{
+        height: 23em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        margin: 0% 0%;
+        background-color: var(--dark);
+        /* width: min(); */
+    }
+
+    #art{
+        position: absolute;
+        margin-top: 6em;
+    }
+    #art img{
+        height: 20em;
+    }
+
+    div#cta{
+        margin-left: 3em;
+    }
+    /* insert buttons */
+    .darkButton{
+        margin-right: 1em;
+    }
+
+    #projectDemo{
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-bottom: 1em;
+        background-color: var(--accentMidtone);
+        
+        display: block;
+    }
+    
+    
+    #projectDemo > div{
+        width: auto;
+    }
+    
+    #projectDemo > div> p{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: clamp(0em, 0.5em,1em);
+        /* background-color: var(--accentMidtone); */
+    }
+
+    #projectButton {
+        margin: 0.5em 0;
+    }
+
+    #projectButton, #demoPhoto{
+        display: inline-block;
+        text-align: center;
+    }
+
+    #demoPhoto > img{
+        /* width: clamp(200px, auto,auto); */
+        overflow: auto;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+  }
+
+@media screen and (max-width: 800px){
+    *{
+        --fontTitle: 1.3em;
+        --fontIntro: 1em;
+        --fontParagraph: 1em;
+    }
+
+    #art{
+        position: absolute;
+        margin-top: 6em;
+    }
+    #art img{
+        height: 200px;
+    }
+
+    div#cta{
+        margin-left: 1em;
+    }
+
+    h1{
+        font-size: var(--fontTitle);
+    }
+    
+    h2{
+        font-size: var(--fontIntro);
+    }
+    
+    p{
+        font-size: var(--fontParagraph);
+    }
+    
+    body{
+        margin: 0% 0%;
+        background-color: var(--dark);
+        width: min();
+    }
+
+    #projectDemo{
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-bottom: 2em;
+        /* background-color: var(--accentMidtone); */
+        
+        display: block;
+    }
+    
+    #projectDemo > div{
+        width: auto;
+    }
+    
+    #projectDemo > div> p{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-right: clamp(0em, 0.5em,1em);
+        /* background-color: var(--accentMidtone); */
+    }
+
+    #projectButton {
+        margin: 0.5em 0;
+    }
+
+    /* #projectButton, #demoPhoto{
+        display: block;
+        text-align: center;
+    } */
+
+    #demoPhoto{
+        display: block;
+        text-align: center;
+    }
+
+    #demoPhoto > img{
+        /* width: clamp(200px, auto,auto); */
+        overflow: auto;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+  }
+
+  
